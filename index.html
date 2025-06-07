@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate to Kidney Aid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .banner-image {
+      width: 100%;
+      height: auto;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0 5px;
+    }
+    p.subtitle {
+      font-size: 14px;
+      margin: 0 0 20px;
+    }
+    .donate-btn {
+      background: linear-gradient(to bottom, #ff9900, #cc6600);
+      color: #fff;
+      border: none;
+      padding: 15px;
+      margin: 10px auto;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 85%;
+      box-shadow: 0 4px #994d00;
+      transition: transform 0.1s;
+      display: block;
+    }
+    .donate-btn:hover {
+      background: linear-gradient(to bottom, #ffaa33, #cc6600);
+    }
+    .donate-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px #994d00;
+    }
+    .note {
+      font-size: 14px;
+      margin: 15px 0 5px;
+    }
+    .stripe {
+      font-weight: bold;
+      color: #635bff;
+      font-family: sans-serif;
+    }
+    img.qr {
+      max-width: 150px;
+      margin: 10px auto;
+      display: block;
+    }
+    .footer-image {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    .footer-link {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="top-phone.jpg" alt="Kidney Aid Top Banner" class="banner-image" />
+    <h1>DONATE £1 TO SUPPORT KIDNEY AID</h1>
+    <p class="subtitle">Helping Kidney Patients Across The UK</p>
+    <button class="donate-btn" onclick="window.location.href='https://buy.stripe.com/test_cN2dUj6gr06P7lG3cd'">Donate £1</button>
+    <button class="donate-btn" onclick="window.location.href='https://buy.stripe.com/test_8wM6qv1MDbmZ6VG3cc'">Donate £3</button>
+    <button class="donate-btn" onclick="window.location.href='https://buy.stripe.com/test_4gwcP30Jn3Wx2aY9AC'">Donate £5</button>
+    <p class="note">Secure Easy Payment Via <span class="stripe">stripe</span></p>
+    <p class="note">Scan To Donate and Forward to a Friend.</p>
+    <img src="kidney_aid_qr_code.png" alt="Scan to Donate QR" class="qr" />
+    <img src="bottom-phone.jpg" alt="Kidney Aid Bottom Banner" class="footer-image" />
+    <p class="footer-link">www.kidney.fit</p>
+  </div>
+</body>
+</html>

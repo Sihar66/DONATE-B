@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complete Your Donation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 440px;
+      margin: 0 auto;
+      padding: 10px;
+      background: #ffffff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+    }
+    .banner-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 15px 5px;
+    }
+    p.subtitle {
+      font-size: 14px;
+      margin: 0 15px 20px;
+    }
+    .donate-btn {
+      background: linear-gradient(to bottom, #ff6600, #cc3300);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      margin: 8px auto;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 75%;
+      box-shadow: 0 3px #992200;
+      transition: transform 0.1s;
+      display: block;
+    }
+    .donate-btn:hover {
+      background: linear-gradient(to bottom, #ff7744, #cc3300);
+    }
+    .donate-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px #992200;
+    }
+    .footer-image {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 0 0 10px 10px;
+    }
+    .footer-link {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+  </style>
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function displayAmount() {
+      const amount = getQueryParam("amount") || "";
+      document.getElementById("donation-amount").textContent = amount ? `£${amount}` : "";
+    }
+
+    window.onload = displayAmount;
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="top-phone.jpg" alt="Kidney Aid Top Banner" class="banner-image" />
+    <h1>COMPLETE YOUR DONATION</h1>
+    <p class="subtitle">You are donating <strong id="donation-amount"></strong> to Kidney Aid</p>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <button type="submit" class="donate-btn">Pay with Stripe</button>
+    </form>
+    <img src="bottom-phone.jpg" alt="Kidney Aid Bottom Banner" class="footer-image" />
+    <p class="footer-link">www.kidney.fit</p>
+  </div>
+</body>
+</html>
